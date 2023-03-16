@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="204dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contador"
+            android:textSize="34sp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/txtContador"
+            android:layout_width="129dp"
+            android:layout_height="51dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="402dp"
+        android:layout_height="91dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnDecrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decrementar"
+            android:text="-"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnIncrementar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="incrementar"
+            android:text="+"
+            android:textSize="34sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="384dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_horizontal|center_vertical|fill_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/txtNumReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:hint="Valor del Reset"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <CheckBox
+            android:id="@+id/chkNumNeg"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:text="Numeros Negativos" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="32dp"
+        android:onClick="reset"
+        android:text="Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
